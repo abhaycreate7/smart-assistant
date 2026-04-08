@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Productivity Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" role="main">
+    <h1>🧠 Smart Productivity Assistant</h1>
+    <p class="subtitle">Powered by Google Gemini AI</p>
+    <div class="input-area">
+      <textarea 
+        id="taskInput" 
+        placeholder="Describe your task... e.g. Remind me to call John tomorrow at 3pm"
+        aria-label="Task input"
+        rows="3">
+      </textarea>
+      <button id="addBtn" onclick="processTask()" aria-label="Add task">
+        ➕ Add Task
+      </button>
+    </div>
+    <div id="responseBox" class="response-box" aria-live="polite"></div>
+    <div class="task-list">
+      <h2>📋 My Tasks</h2>
+      <ul id="taskList" aria-label="Task list"></ul>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
